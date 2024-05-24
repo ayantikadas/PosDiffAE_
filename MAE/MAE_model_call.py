@@ -414,10 +414,10 @@ class MaskedAutoencoderViT(nn.Module):
 #         else:
         return latent
 
-def model_call(image_batch=torch.ones((1, 3, 256, 256))):    
+def model_call(image_batch=torch.ones((1, 3, 256, 256)),model_weight = ' '):    
     device = 'cuda'
     model_mae =  MaskedAutoencoderViT()
-    model_mae.load_state_dict(torch.load('/storage/Ayantika/Masked_auto_encoder/MAE-code/ckpt_official/epoch_400.pt'))
+    model_mae.load_state_dict(torch.load(model_weight))
     model_mae.eval()
     model_mae.to(device);
     cond = model_mae(image_batch.to(device))
@@ -426,7 +426,7 @@ def model_call(image_batch=torch.ones((1, 3, 256, 256))):
     return model_mae, cond
 if __name__ == '__main__':
     model_mae = MaskedAutoencoderViT()
-    model_mae.load_state_dict(torch.load('/storage/Ayantika/Masked_auto_encoder/MAE-code/ckpt_official/epoch_400.pt'))
+#     model_mae.load_state_dict(torch.load('/storage/Ayantika/Masked_auto_encoder/MAE-code/ckpt_official/epoch_400.pt'))
 
 
 #     def forward(self, imgs, mask_ratio=0.75, is_testing=False, idx_masking=None, return_latent: bool = True):

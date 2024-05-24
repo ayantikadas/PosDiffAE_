@@ -12,7 +12,7 @@ from config_ import TrainConfig
 import os
 
 class DiffAE_model_call():
-    def __init__(self, device = 'cuda', model_weight='/storage/Ayantika/results/checkpoints_hist_path/Nissl/epoch=107-step=46658.ckpt',\
+    def __init__(self, device = 'cuda', model_weight=' ',\
                  ):
         gpus = [0]
         conf = ffhq128_autoenc_130M()

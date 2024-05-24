@@ -8,7 +8,7 @@ import numpy as np
 import os
 
 class vit_model_call():
-    def __init__(self, device = 'cuda', model_weight='/storage/Ayantika/Transunet/TransUNet/Weights/ckpt/segment_0.0012858885072417699.pt',\
+    def __init__(self, device = 'cuda', model_weight=' ',\
                  ):
         num_classes=3
         max_iterations=1200

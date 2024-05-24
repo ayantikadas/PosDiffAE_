@@ -12,7 +12,7 @@ from experiment_ import LitModel
 from torch.utils.data import DataLoader
 from config_ import TrainConfig
 class PosDiffAE_model_call():
-    def __init__(self, device = 'cuda', model_weight='/storage/Ayantika/results/checkpoints_hist_path_with_r_theta/Nissl/epoch=161-step=101898.ckpt',\
+    def __init__(self, device = 'cuda', model_weight=' ',\
                  ):
         gpus = [0]
         conf = ffhq128_autoenc_130M()
