@@ -1,0 +1,13 @@
+dataloader:
+#   training_path: ['/home/ayantika/Diffusion/BraTSReg_Training_Data_v3/**/**_00_**t2.nii.gz', '/home/ayantika/Diffusion/BraTSReg_Training_Data_v3/**/**_01_**t2.nii.gz']
+  key_tuple_image: ['_train']
+#   mask_path: ['/home/ayantika/Diffusion/BraTSReg_Training_Data_v3/**/**_00_**t2.nii.gz']
+  key_tuple_mask: ['_train']
+  img_height: 256
+  img_width: 256
+  total_slices_per_vol: 181
+  start_slice_per_vol: 60
+  end_slice_per_vol: 71 
+  #70 slices per volume
+  h5cachedir_: '/data/Ayantika/h5data_store/ADNI'
+  batch_size: 25
